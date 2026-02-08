@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  font-family: "Merriweather", serif;
+}
+
+.floating-heart {
+  position: fixed;
+  font-size: 2rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    ellipse at center,
+    #ffd9e8 0%,
+    #ffc0cb 20%,
+    #ffb6c1 40%,
+    #ff69b4 70%,
+    #8b0000 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  font-size: 3.5rem;
+  margin-bottom: 80px;
+  margin-top: 0;
+  color: #c41e3a;
+  font-family: "Lobster", cursive;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.letter {
+  width: 380px;
+  height: 240px;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+}
+
+.letter-front,
+.letter-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+}
+
+.letter-front img,
+.letter-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.letter-page {
+  position: relative;
+  max-width: 700px;
+  text-align: center;
+  transform-origin: top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.letter-opened-image {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter-opened-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.letter-text {
+  font-family: "Allura", cursive;
+  font-size: 1.6rem;
+}
+
+.question {
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+.buttons {
+  margin-top: 30px;
+  position: relative;
+  height: 90px;
+}
+
+.yes {
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: none;
+  background: #ff8fab;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.no {
+  position: absolute;
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+}
+
+.note {
+  margin-top: 25px;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.yes-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.floral-archway {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.archway-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('./assets/arch.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rose-petals {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.petal {
+  position: absolute;
+  left: 50%;
+  font-size: 2.5rem;
+  z-index: 5;
+}
+
+.celebration-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  max-width: 400px;
+  font-size: 1.4rem;
+  color: #8b4789;
+  font-family: "Allura", cursive;
+  text-align: center;
+}
+
+.celebrate {
+  display: none;
+  margin-top: 25px;
+  font-size: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.love-letter {
+  max-width: 800px;
+  padding: 40px;
+  margin: 40px auto;
+  font-family: "Allura", cursive;
+  font-size: 1.1rem;
+  color: #000;
+  line-height: 1.8;
+  text-align: justify;
+}
